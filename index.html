@@ -145,7 +145,6 @@
     </div>
   </div>
 
-  <!-- Spotlight section — generated from data -->
   <section class="spotlight-section" id="spotlight">
     <div style="display:flex;align-items:center;gap:16px;max-width:1100px;margin:0 auto 2rem;">
       <div style="font-family:'Cinzel',serif;font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,160,190,0.6);">Recent spotlights</div>
@@ -155,7 +154,6 @@
     <div class="sp-grid" id="spotlightGrid"></div>
   </section>
 
-  <!-- Directory — generated from data -->
   <div class="directory-section" id="directory">
     <div class="directory-heading">Club directory</div>
     <div class="filter-row">
@@ -209,11 +207,10 @@
 
   <script src="clubs.js"></script>
   <script>
-    // Update stats
+
     document.getElementById('statClubs').textContent = CLUBS.length;
     document.getElementById('statSpotlights').textContent = SPOTLIGHTS.length;
 
-    // Build spotlight grid (latest + 2 previous)
     const recent = [...SPOTLIGHTS].slice(0, 3);
     const latestSpotlights = recent.length >= 3 ? [recent[1], recent[0], recent[2]] : recent;
     const grid = document.getElementById('spotlightGrid');
@@ -240,7 +237,6 @@
       grid.appendChild(el);
     });
 
-    // Build club grid
     function buildClubGrid(catFilter = 'all', serverFilter = 'all') {
       const clubGrid = document.getElementById('clubGrid');
       clubGrid.innerHTML = '';
