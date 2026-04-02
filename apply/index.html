@@ -218,12 +218,12 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>
-    emailjs.init('YOUR_PUBLIC_KEY');
+    emailjs.init('fc_E6pbmDqlucTb_e');
     function sendApplication(e) {
       e.preventDefault();
       const btn = document.querySelector('.btn-submit');
       btn.textContent = 'Sending...'; btn.disabled = true;
-      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', '#applyForm')
+      emailjs.sendForm('service_gg8xyjw', 'template_rewpz5e', '#applyForm')
         .then(() => { btn.textContent = 'Application sent!'; btn.style.background = 'rgba(100,160,130,0.8)'; },
         (err) => { btn.textContent = 'Something went wrong — please try again.'; btn.disabled = false; console.error(err); });
     }
