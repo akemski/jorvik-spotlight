@@ -13,7 +13,7 @@ const CLUBS = [
     instagram: "@testclub",
     instagramUrl: "https://instagram.com/testclub",
     acceptingMembers: true,
-    image: null, // e.g. "images/silver-grace.jpg" or a URL
+    image: null,
     avatarBg: "rgba(220,50,90,0.25)",
     avatarColor: "#ffb8cc",
     description: "This is just a test.",
@@ -147,20 +147,18 @@ const CLUBS = [
   }
 ];
 
-// =============================================
-//  SPOTLIGHT DATA
-//  One entry per spotlight month
-// =============================================
+
+
 
 const SPOTLIGHTS = [
   {
-    id: "silver-grace",
-    clubId: "silver-grace",
+    id: "test-club",
+    clubId: "test-club",
     month: "March 2026",
     isLatest: true,
-    title: "Silver Grace",
-    whyLabel: "Warmest atmosphere I've ever experienced",
-    article: "Silver Grace stood out to me because of the sheer warmth of their community. I attended two of their meetings and was genuinely moved by how well the club leader made everyone feel welcome — experienced riders and complete beginners alike. This is the kind of club that makes SSO feel like home.\n\nWhat really impressed me was how the meetings are structured without ever feeling rigid. There's a clear plan, but there's also always room for spontaneous fun. The members clearly care about each other beyond just the game.\n\nIf you're looking for a dressage club that takes the riding seriously but never loses sight of what makes SSO special — the community — then Silver Grace is absolutely worth applying to."
+    title: "Test Club",
+    whyLabel: "Test Label",
+    article: "This is just another test."
   },
   {
     id: "moonridge-riders",
