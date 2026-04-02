@@ -1,6 +1,6 @@
 const CLUBS = [
   {
-    id: "test-cub",
+    id: "test-club",
     name: "Test Club",
     initials: "TC",
     category: "hangout",
