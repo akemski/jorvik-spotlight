@@ -1,36 +1,31 @@
-// =============================================
-//  JORVIK SPOTLIGHT — Central Data File
-//  Add new clubs and spotlights here!
-// =============================================
-
 const CLUBS = [
   {
-    id: "silver-grace",
-    name: "Silver Grace",
-    initials: "SG",
-    category: "dressage",
-    categoryLabel: "Dressage",
-    server: "DE3",
-    founded: "January 2022",
-    members: "~24",
-    meetingTimes: "Saturdays 7pm",
-    language: "English / German",
-    instagram: "@silvergraceclub",
-    instagramUrl: "https://instagram.com/silvergraceclub",
+    id: "test-cub",
+    name: "Test Club",
+    initials: "TC",
+    category: "hangout",
+    categoryLabel: "Hangout",
+    server: "DE18",
+    founded: "February 2025",
+    members: "50",
+    meetingTimes: "Mondays 9pm",
+    language: "German",
+    instagram: "@testclub",
+    instagramUrl: "https://instagram.com/testclub",
     acceptingMembers: true,
     image: null, // e.g. "images/silver-grace.jpg" or a URL
     avatarBg: "rgba(220,50,90,0.25)",
     avatarColor: "#ffb8cc",
-    description: "Silver Grace is an elegant dressage community with a warm and welcoming atmosphere. Whether you're just starting out or have years of experience, everyone is treated with the same respect and care. Weekly meetings are well-organized and always have a clear focus, but there's always time to chat and just enjoy being together.",
-    requirements: "Open to all levels — beginners are very welcome. Members are expected to attend at least one meeting per month and communicate if they're unavailable. A basic understanding of dressage is helpful but not required.",
-    // Personal visit — set to null if not visited yet
+    description: "This is just a test.",
+    requirements: "This is also just a test.",
+
     visit: {
-      date: "February 2026",
-      meetingsAttended: 2,
-      report: "\"I joined two of Silver Grace's weekly meetings and honestly wasn't expecting to feel so at home so quickly. The club leader has a real talent for making newcomers feel included without making it awkward. The meetings are structured but never stiff — there's genuine warmth here. If you're looking for a dressage club that takes the riding seriously but keeps the vibe light and friendly, Silver Grace is absolutely worth applying to.\""
+      date: "March 2026",
+      meetingsAttended: 3,
+      report: "\"This test will show, if everything works.\""
     },
-    // Spotlight — set to null if not spotlighted
-    spotlight: "silver-grace"
+
+    spotlight: "test-club"
   },
   {
     id: "moonridge-riders",
