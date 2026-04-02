@@ -84,11 +84,11 @@
   <nav class="nav">
     <div class="nav-logo">Jorvik Spotlight</div>
     <div class="nav-links">
-      <a href="index.html" class="active">Clubs</a>
-      <a href="spotlight.html">Spotlight</a>
-      <a href="about.html">About</a>
+      <a href="/" class="active">Clubs</a>
+      <a href="spotlight/">Spotlight</a>
+      <a href="about/">About</a>
     </div>
-    <a href="apply.html" class="nav-cta">Submit your club</a>
+    <a href="apply/" class="nav-cta">Submit your club</a>
   </nav>
 
   <div class="ticker-wrap">
@@ -152,7 +152,7 @@
     <div style="display:flex;align-items:center;gap:16px;max-width:1100px;margin:0 auto 2rem;">
       <div style="font-family:'Cinzel',serif;font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,160,190,0.6);">Recent spotlights</div>
       <div style="flex:1;height:1px;background:rgba(255,255,255,0.1);"></div>
-      <a href="spotlight.html" style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,160,190,0.6);text-decoration:none;">All spotlights →</a>
+      <a href="spotlight/" style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,160,190,0.6);text-decoration:none;">All spotlights →</a>
     </div>
     <div class="sp-grid" id="spotlightGrid"></div>
   </section>
@@ -195,7 +195,7 @@
   <section class="apply-section">
     <h2>Get your club listed</h2>
     <p>Submit your club for review. Every club is personally checked before it earns a spot in the directory.</p>
-    <a href="apply.html" style="display:inline-block;padding:11px 28px;font-size:13px;font-weight:700;font-family:'Quicksand',sans-serif;letter-spacing:0.06em;text-transform:uppercase;background:#e0336a;border:none;border-radius:4px;color:#ffffff;text-decoration:none;">Apply now</a>
+    <a href="apply/" style="display:inline-block;padding:11px 28px;font-size:13px;font-weight:700;font-family:'Quicksand',sans-serif;letter-spacing:0.06em;text-transform:uppercase;background:#e0336a;border:none;border-radius:4px;color:#ffffff;text-decoration:none;">Apply now</a>
   </section>
 
   <footer style="padding:2rem 2.5rem 0;border-top:1px solid rgba(255,255,255,0.1);display:flex;flex-direction:column;">
@@ -203,8 +203,8 @@
       <div style="font-family:'Cinzel',serif;font-size:15px;color:rgba(255,160,190,0.5);letter-spacing:0.08em;">Jorvik Spotlight</div>
       <div style="display:flex;gap:1.5rem;">
         <a href="#" style="font-size:13px;color:rgba(255,160,190,0.4);text-decoration:none;">Instagram</a>
-        <a href="about.html" style="font-size:13px;color:rgba(255,160,190,0.4);text-decoration:none;">Contact</a>
-        <a href="about.html" style="font-size:13px;color:rgba(255,160,190,0.4);text-decoration:none;">About</a>
+        <a href="about/" style="font-size:13px;color:rgba(255,160,190,0.4);text-decoration:none;">Contact</a>
+        <a href="about/" style="font-size:13px;color:rgba(255,160,190,0.4);text-decoration:none;">About</a>
       </div>
     </div>
     <div style="font-family:'Cinzel',serif;font-size:64px;font-weight:900;color:rgba(220,50,90,0.07);letter-spacing:0.05em;text-align:center;padding:1rem 0 0;border-top:1px solid rgba(255,255,255,0.07);user-select:none;">JORVIK SPOTLIGHT</div>
@@ -225,7 +225,7 @@
       if (!club) return;
       const isFeat = sp.isLatest;
       const el = document.createElement('a');
-      el.href = `spotlight.html?id=${sp.id}`;
+      el.href = `/spotlight/?id=${sp.id}`;
       el.className = isFeat ? 'sp-feat' : 'sp-box';
       el.innerHTML = `
         <div class="sp-month">${sp.month}${isFeat ? ' <span class="sp-new">New</span>' : ''}</div>
@@ -254,7 +254,7 @@
         if (!catMatch || !serverMatch) return;
         visible++;
         const el = document.createElement('a');
-        el.href = `club.html?id=${club.id}`;
+        el.href = `/club/?id=${club.id}`;
         el.className = 'club-card';
         el.innerHTML = `
           <div class="club-top">
