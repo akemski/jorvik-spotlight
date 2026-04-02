@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotlight — Jorvik Spotlight</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body { background: #150d12; color: #fff0f4; }
+
+    /* Overview styles */
+    .spotlight-page { max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem 5rem; }
+    .section-divider { display: flex; align-items: center; gap: 16px; margin-bottom: 1.5rem; }
+    .section-divider-label { font-family: 'Cinzel', serif; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,160,190,0.6); white-space: nowrap; }
+    .section-divider-line { flex: 1; height: 1px; background: rgba(255,255,255,0.1); }
+    .featured-card { background: rgba(220,50,90,0.08); border: 1px solid rgba(255,100,150,0.35); border-radius: 6px; padding: 2rem; margin-bottom: 2.5rem; display: flex; gap: 1.5rem; align-items: flex-start; flex-wrap: wrap; }
+    .featured-icon { width: 72px; height: 72px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-family: 'Cinzel', serif; font-size: 22px; font-weight: 700; }
+    .badge-new { font-size: 11px; font-weight: 700; padding: 3px 12px; border-radius: 20px; background: rgba(220,50,90,0.35); border: 0.5px solid rgba(255,100,150,0.6); color: #ff9ab8; }
+    .badge-featured { font-size: 11px; font-weight: 700; padding: 3px 12px; border-radius: 20px; background: rgba(180,130,40,0.15); border: 0.5px solid rgba(220,170,60,0.35); color: #d4aa55; }
+    .featured-title { font-family: 'Cinzel', serif; font-size: 22px; font-weight: 700; color: #ffffff; margin-bottom: 4px; }
+    .featured-club { font-size: 14px; font-weight: 600; color: rgba(255,140,170,0.7); margin-bottom: 8px; }
+    .featured-why { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #ff9ab8; margin-bottom: 6px; }
+    .featured-text { font-size: 14px; font-weight: 400; color: rgba(255,255,255,0.65); line-height: 1.7; margin-bottom: 14px; }
+    .sp-link-pink { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #ff5588; text-decoration: none; }
+    .sp-link-pink:hover { color: #ff9ab8; }
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+    .sp-card { background: rgba(255,255,255,0.025); border: 0.5px solid rgba(255,120,160,0.15); border-radius: 6px; padding: 1.25rem; display: flex; flex-direction: column; gap: 10px; transition: border-color 0.15s, background 0.15s; color: inherit; text-decoration: none; }
+    .sp-card:hover { border-color: rgba(255,100,150,0.4); background: rgba(220,50,90,0.06); }
+    .sp-card-top { display: flex; align-items: center; justify-content: space-between; }
+    .sp-avatar { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; }
+    .sp-club-name { font-family: 'Cinzel', serif; font-size: 14px; font-weight: 700; color: #ffffff; }
+    .sp-date { font-size: 13px; font-weight: 400; color: rgba(255,160,190,0.45); }
+    .sp-title { font-size: 15px; font-weight: 700; color: #ffffff; line-height: 1.35; }
+    .sp-why-label { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #ff9ab8; }
+    .sp-preview { font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.55); line-height: 1.6; }
+    .sp-footer { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 8px; border-top: 0.5px solid rgba(255,255,255,0.08); }
+    .sp-cat { font-size: 12px; font-weight: 600; color: rgba(255,140,170,0.6); }
+
+    /* Detail styles */
+    .detail-page { max-width: 760px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+    .detail-back { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,160,190,0.5); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-bottom: 2rem; }
+    .detail-back:hover { color: #ff9ab8; }
+    .detail-month { font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,160,190,0.7); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px; }
+    .detail-month::before { content: ''; display: block; width: 20px; height: 0.5px; background: rgba(255,120,160,0.6); }
+    .detail-title { font-family: 'Cinzel', serif; font-size: 36px; font-weight: 900; color: #ffffff; line-height: 1.1; margin-bottom: 0.5rem; }
+    .detail-why { font-size: 14px; font-weight: 600; color: #ff9ab8; margin-bottom: 2rem; font-style: italic; }
+    .detail-club-card { background: rgba(220,50,90,0.08); border: 0.5px solid rgba(255,100,150,0.3); border-radius: 6px; padding: 1rem 1.25rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; transition: background 0.15s; }
+    .detail-club-card:hover { background: rgba(220,50,90,0.14); }
+    .detail-club-avatar { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Cinzel', serif; font-size: 15px; font-weight: 700; flex-shrink: 0; }
+    .detail-club-name { font-family: 'Cinzel', serif; font-size: 16px; font-weight: 700; color: #ffffff; }
+    .detail-club-sub { font-size: 13px; color: rgba(255,160,190,0.6); margin-top: 2px; }
+    .detail-article { font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.75); line-height: 1.85; }
+    .detail-article p { margin-bottom: 1.25rem; }
+    .detail-divider { width: 60px; height: 1px; background: rgba(255,100,150,0.4); margin: 2.5rem 0; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" style="justify-content:space-between;">
+    <div class="nav-logo" style="position:static;font-family:'Cinzel',serif;font-size:16px;font-weight:700;color:#ff9ab8;letter-spacing:0.08em;">Jorvik Spotlight</div>
+    <div class="nav-links" style="gap:2.5rem;">
+      <a href="../">Clubs</a>
+      <a href="../spotlight/" class="active">Spotlight</a>
+      <a href="../about/">About</a>
+    </div>
+    <a href="../apply/" class="nav-cta" style="position:static;border-radius:30px;background:rgba(220,70,110,0.25);border:0.5px solid rgba(240,120,160,0.6);color:#ff9ab8;">Submit your club</a>
+  </nav>
+
+  <div id="pageContent"></div>
+
+  <footer style="padding:2rem 2.5rem 0;border-top:1px solid rgba(255,255,255,0.1);display:flex;flex-direction:column;">
+    <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:1.5rem;">
+      <div style="font-family:'Cinzel',serif;font-size:15px;color:rgba(255,160,190,0.5);letter-spacing:0.08em;">Jorvik Spotlight</div>
+      <div style="display:flex;gap:1.5rem;">
+        <a href="#" style="font-size:13px;color:rgba(255,160,190,0.4);text-decoration:none;">Instagram</a>
+        <a href="../about/" style="font-size:13px;color:rgba(255,160,190,0.4);text-decoration:none;">Contact</a>
+        <a href="../about/" style="font-size:13px;color:rgba(255,160,190,0.4);text-decoration:none;">About</a>
+      </div>
+    </div>
+    <div style="font-family:'Cinzel',serif;font-size:64px;font-weight:900;color:rgba(220,50,90,0.07);letter-spacing:0.05em;text-align:center;padding:1rem 0 0;border-top:1px solid rgba(255,255,255,0.07);user-select:none;">JORVIK SPOTLIGHT</div>
+  </footer>
+
+  <script src="../clubs.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    const container = document.getElementById('pageContent');
+
+    if (id) {
+      // DETAIL VIEW
+      const sp = getSpotlight(id);
+      const club = sp ? getClub(sp.clubId) : null;
+
+      if (!sp || !club) {
+        container.innerHTML = '<div style="text-align:center;padding:6rem 2rem;font-family:Cinzel,serif;font-size:24px;color:rgba(255,160,190,0.5);">Spotlight not found.</div>';
+      } else {
+        document.title = `${club.name} Spotlight — Jorvik Spotlight`;
+        const paragraphs = sp.article.split('\n\n').map(p => `<p>${p}</p>`).join('');
+        container.innerHTML = `
+          <div class="detail-page">
+            <a class="detail-back" href="../spotlight/">← All spotlights</a>
+            <div class="detail-month">${sp.month}</div>
+            <div class="detail-title">${club.name}</div>
+            <div class="detail-why">"${sp.whyLabel}"</div>
+            <a class="detail-club-card" href="/club/?id=${club.id}">
+              <div class="detail-club-avatar" style="background:${club.avatarBg};color:${club.avatarColor};">${club.initials}</div>
+              <div>
+                <div class="detail-club-name">${club.name}</div>
+                <div class="detail-club-sub">${club.categoryLabel} · ${club.server} · View club page →</div>
+              </div>
+            </a>
+            <div class="detail-divider"></div>
+            <div class="detail-article">${paragraphs}</div>
+          </div>
+        `;
+      }
+    } else {
+      // OVERVIEW
+      document.title = 'Spotlight — Jorvik Spotlight';
+      const latest = SPOTLIGHTS.find(s => s.isLatest);
+      const latestClub = latest ? getClub(latest.clubId) : null;
+
+      let overviewHTML = `
+        <div class="page-header" style="background:#150d12;border-bottom:1px solid rgba(255,255,255,0.08);">
+          <svg style="position:absolute;top:0;left:0;right:0;bottom:0;pointer-events:none;" viewBox="0 0 900 180" preserveAspectRatio="xMidYMid slice">
+            <circle cx="80" cy="30" r="1.2" fill="rgba(255,160,190,0.45)"/>
+            <circle cx="430" cy="50" r="1.2" fill="rgba(255,160,190,0.5)"/>
+            <circle cx="780" cy="42" r="1.5" fill="rgba(255,160,190,0.4)"/>
+          </svg>
+          <div class="page-header-inner">
+            <div class="page-tag" style="color:rgba(255,160,190,0.75);border-color:rgba(255,120,160,0.35);">Spotlight</div>
+            <h1 class="page-title" style="font-family:'Cinzel',serif;color:#ffffff;">Club features & stories</h1>
+            <p class="page-sub" style="color:rgba(255,200,215,0.5);">Each month I pick one club that stood out — for their atmosphere, a special event, or because they're a great newcomer. Spotlight clubs are always part of the directory too.</p>
+          </div>
+        </div>
+        <div class="spotlight-page">
+      `;
+
+      if (latest && latestClub) {
+        overviewHTML += `
+          <div class="section-divider"><div class="section-divider-label">Latest spotlight</div><div class="section-divider-line"></div></div>
+          <div class="featured-card">
+            ${avatarHTML(latestClub, "72px")}
+            <div style="flex:1;min-width:200px;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
+                <span class="badge-new">New</span>
+                <span class="badge-featured">Spotlight of the month</span>
+                <span style="font-size:13px;font-weight:400;color:rgba(255,160,190,0.5);">${latest.month}</span>
+              </div>
+              <div class="featured-title">${latestClub.name}</div>
+              <div class="featured-club">${latestClub.categoryLabel} · ${latestClub.server}</div>
+              <div class="featured-why">${latest.whyLabel}</div>
+              <div class="featured-text">${latest.article.split('\n')[0].substring(0, 200)}...</div>
+              <a class="sp-link-pink" href="/spotlight/?id=${latest.id}">Read full article →</a>
+            </div>
+          </div>
+        `;
+      }
+
+      overviewHTML += `<div class="section-divider"><div class="section-divider-label">All spotlights</div><div class="section-divider-line"></div></div><div class="cards-grid">`;
+
+      SPOTLIGHTS.forEach(sp => {
+        const club = getClub(sp.clubId);
+        if (!club) return;
+        overviewHTML += `
+          <a class="sp-card" href="/spotlight/?id=${sp.id}">
+            <div class="sp-card-top">
+              <div style="display:flex;align-items:center;gap:8px;">
+                ${avatarHTML(club, "32px")}
+                <div class="sp-club-name">${club.name}</div>
+              </div>
+              <span class="sp-date">${sp.month.split(' ')[0].substring(0,3)} ${sp.month.split(' ')[1]}</span>
+            </div>
+            <div class="sp-why-label">${sp.whyLabel}</div>
+            <div class="sp-preview">${sp.article.split('\n')[0].substring(0, 100)}...</div>
+            <div class="sp-footer">
+              <span class="sp-cat">${club.categoryLabel} · ${club.server}</span>
+              <span class="sp-link-pink">Read →</span>
+            </div>
+          </a>
+        `;
+      });
+
+      overviewHTML += `</div></div>`;
+      container.innerHTML = overviewHTML;
+    }
+  </script>
+</body>
+</html>
