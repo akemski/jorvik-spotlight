@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Jorvik Spotlight</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { background: #150d12; color: #fff0f4; }
+
+    .about-page { max-width: 760px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+
+    .profile-card {
+      background: rgba(220,50,90,0.08);
+      border: 0.5px solid rgba(255,100,150,0.3);
+      border-radius: 6px; padding: 1.75rem;
+      display: flex; gap: 1.5rem; align-items: flex-start;
+      flex-wrap: wrap; margin-bottom: 2.5rem;
+    }
+    .profile-avatar {
+      width: 72px; height: 72px; border-radius: 50%;
+      background: rgba(220,50,90,0.3); color: #ffb8cc;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Cinzel', serif; font-size: 22px; font-weight: 700; flex-shrink: 0;
+    }
+    .profile-name { font-family: 'Cinzel', serif; font-size: 20px; font-weight: 700; color: #ffffff; margin-bottom: 4px; }
+    .profile-role { font-size: 14px; font-weight: 500; color: #ff9ab8; margin-bottom: 12px; }
+    .profile-text { font-size: 15px; font-weight: 400; color: rgba(255,255,255,0.7); line-height: 1.75; }
+
+    .about-section { margin-bottom: 2rem; }
+    .about-section-title {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: #ff9ab8;
+      margin-bottom: 1rem; padding-bottom: 0.6rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .about-text { font-size: 15px; font-weight: 400; color: rgba(255,255,255,0.7); line-height: 1.8; }
+    .about-text p { margin-bottom: 0.85rem; }
+    .about-text p:last-child { margin-bottom: 0; }
+
+    .values-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin-top: 1rem; }
+    .value-card {
+      background: rgba(255,255,255,0.03);
+      border: 0.5px solid rgba(255,255,255,0.1);
+      border-radius: 6px; padding: 1.1rem;
+    }
+    .value-icon { font-size: 16px; color: #ff9ab8; margin-bottom: 8px; }
+    .value-title { font-size: 14px; font-weight: 700; color: #ffffff; margin-bottom: 4px; }
+    .value-text { font-size: 14px; font-weight: 400; color: rgba(255,255,255,0.5); line-height: 1.6; }
+
+    .faq-list { margin-top: 1rem; display: flex; flex-direction: column; gap: 10px; }
+    .faq-item {
+      background: rgba(255,255,255,0.03);
+      border: 0.5px solid rgba(255,255,255,0.1);
+      border-radius: 6px; padding: 1rem;
+    }
+    .faq-q { font-size: 14px; font-weight: 700; color: #ffffff; margin-bottom: 6px; }
+    .faq-a { font-size: 14px; font-weight: 400; color: rgba(255,255,255,0.6); line-height: 1.65; }
+
+    .contact-card {
+      background: rgba(255,255,255,0.03);
+      border: 0.5px solid rgba(255,255,255,0.1);
+      border-radius: 6px; padding: 1.25rem; margin-top: 1rem;
+    }
+    .contact-row {
+      display: flex; align-items: center; gap: 12px;
+      padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .contact-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .contact-row:first-child { padding-top: 0; }
+    .contact-icon {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: rgba(220,50,90,0.15);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .contact-label { font-size: 12px; font-weight: 500; color: rgba(255,160,190,0.55); margin-bottom: 2px; }
+    .contact-value { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.85); }
+    .contact-value a { color: #ff9ab8; text-decoration: none; }
+    .contact-value a:hover { color: #ffffff; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" style="justify-content:space-between;">
+    <div class="nav-logo" style="position:static;font-family:'Cinzel',serif;font-size:16px;font-weight:700;color:#ff9ab8;letter-spacing:0.08em;">Jorvik Spotlight</div>
+    <div class="nav-links" style="gap:2.5rem;">
+      <a href="index.html">Clubs</a>
+      <a href="spotlight.html">Spotlight</a>
+      <a href="about.html" class="active">About</a>
+    </div>
+    <a href="apply.html" class="nav-cta" style="position:static;border-radius:30px;background:rgba(220,70,110,0.25);border:0.5px solid rgba(240,120,160,0.6);color:#ff9ab8;">Submit your club</a>
+  </nav>
+
+  <div class="page-header" style="background:#150d12;border-bottom:1px solid rgba(255,255,255,0.08);">
+    <svg style="position:absolute;top:0;left:0;right:0;bottom:0;pointer-events:none;" viewBox="0 0 900 180" preserveAspectRatio="xMidYMid slice">
+      <circle cx="80" cy="30" r="1.2" fill="rgba(255,160,190,0.45)"/>
+      <circle cx="250" cy="18" r="1.5" fill="rgba(255,160,190,0.35)"/>
+      <circle cx="430" cy="50" r="1.2" fill="rgba(255,160,190,0.5)"/>
+      <circle cx="600" cy="22" r="1" fill="rgba(255,160,190,0.3)"/>
+      <circle cx="780" cy="42" r="1.5" fill="rgba(255,160,190,0.4)"/>
+    </svg>
+    <div class="page-header-inner">
+      <div class="page-tag" style="color:rgba(255,160,190,0.75);border-color:rgba(255,120,160,0.35);">About</div>
+      <h1 class="page-title" style="font-family:'Cinzel',serif;color:#ffffff;">The person behind the spotlight</h1>
+      <p class="page-sub" style="color:rgba(255,200,215,0.5);">Jorvik Spotlight is a one-person project built out of love for the SSO community.</p>
+    </div>
+  </div>
+
+  <div class="about-page">
+
+    <div class="profile-card">
+      <div class="profile-avatar">JS</div>
+      <div>
+        <div class="profile-name">Jorvik Spotlight</div>
+        <!-- Replace [year] with the year you started playing SSO -->
+        <div class="profile-role">Founder & writer · SSO player since [year]</div>
+        <div class="profile-text">Hey! I'm the person running this whole thing. I've been playing Star Stable for years and the club community has always been one of my favourite parts of the game. I started Jorvik Spotlight because I wanted to make it easier for players to find a club that actually fits them — and to give clubs the recognition they deserve.</div>
+      </div>
+    </div>
+
+    <div class="about-section">
+      <div class="about-section-title">What this is</div>
+      <div class="about-text">
+        <p>Jorvik Spotlight is a curated directory of verified Star Stable clubs, combined with a personal magazine where I write about the clubs I visit. Every club in the directory has been personally reviewed — sometimes that means joining a meeting, sometimes it means checking out their Instagram, always it means actually paying attention.</p>
+        <p>This isn't an automated list. It's something I genuinely care about and put time into. If a club is listed here, it's because I believe it's worth your time.</p>
+      </div>
+    </div>
+
+    <div class="about-section">
+      <div class="about-section-title">What I stand for</div>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">★</div>
+          <div class="value-title">Honest reviews</div>
+          <div class="value-text">I visit clubs myself before writing about them. No copy-paste, no guessing.</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">♡</div>
+          <div class="value-title">Community first</div>
+          <div class="value-text">This project exists for the players — to help you find where you belong.</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">✦</div>
+          <div class="value-title">Quality over quantity</div>
+          <div class="value-text">A smaller, curated directory beats a giant unverified list any day.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-section">
+      <div class="about-section-title">FAQ</div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">How do I get my club listed?</div>
+          <div class="faq-a">Fill out the application form and I'll personally review your club. If everything checks out, you'll get a verified spot in the directory. This usually takes 1–2 weeks.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is it free to be listed?</div>
+          <div class="faq-a">Yes, completely free. This is a community project, not a business.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How do I get a spotlight article?</div>
+          <div class="faq-a">I choose clubs for spotlights myself based on what I find interesting or special. You can't apply for a spotlight directly — but being in the directory is the first step.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can I update my club's information?</div>
+          <div class="faq-a">Yes! Just reach out via Instagram or the contact details below and I'll get it updated for you.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Do I have to be in the directory to get a spotlight?</div>
+          <div class="faq-a">Not necessarily — I can also reach out to clubs directly if I'd like to feature them. But being in the directory definitely helps!</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-section">
+      <div class="about-section-title">Get in touch</div>
+      <div class="contact-card">
+        <div class="contact-row">
+          <div class="contact-icon">
+            <svg width="14" height="14" viewBox="0 0 14 14"><rect x="1" y="1" width="12" height="12" rx="3.5" fill="none" stroke="#ff9ab8" stroke-width="1"/><circle cx="7" cy="7" r="2.5" fill="none" stroke="#ff9ab8" stroke-width="1"/><circle cx="10.2" cy="3.8" r="0.8" fill="#ff9ab8"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Instagram</div>
+            <!-- Replace with your actual Instagram -->
+            <div class="contact-value"><a href="https://instagram.com/jorvikspotlight" target="_blank">@jorvikspotlight</a></div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">
+            <svg width="14" height="14" viewBox="0 0 14 14"><rect x="1" y="3" width="12" height="8" rx="1.5" fill="none" stroke="#ff9ab8" stroke-width="1"/><path d="M1 4l6 4 6-4" stroke="#ff9ab8" stroke-width="1" fill="none"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Email</div>
+            <!-- Replace with your actual email -->
+            <div class="contact-value"><a href="mailto:hello@jorvikspotlight.com">hello@jorvikspotlight.com</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer style="padding:2rem 2.5rem 0;border-top:1px solid rgba(255,255,255,0.1);display:flex;flex-direction:column;">
+    <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:1.5rem;">
+      <div style="font-family:'Cinzel',serif;font-size:15px;color:rgba(255,160,190,0.5);letter-spacing:0.08em;">Jorvik Spotlight</div>
+      <div style="display:flex;gap:1.5rem;">
+        <a href="#" style="font-size:13px;color:rgba(255,160,190,0.4);text-decoration:none;">Instagram</a>
+        <a href="about.html" style="font-size:13px;color:rgba(255,160,190,0.4);text-decoration:none;">Contact</a>
+        <a href="about.html" style="font-size:13px;color:rgba(255,160,190,0.4);text-decoration:none;">About</a>
+      </div>
+    </div>
+    <div style="font-family:'Cinzel',serif;font-size:64px;font-weight:900;color:rgba(220,50,90,0.07);letter-spacing:0.05em;text-align:center;padding:1rem 0 0;border-top:1px solid rgba(255,255,255,0.07);user-select:none;">JORVIK SPOTLIGHT</div>
+  </footer>
+
+</body>
+</html>

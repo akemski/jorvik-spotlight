@@ -1,0 +1,359 @@
+/* =====================
+   Jorvik Spotlight
+   Dusty Rose & Mauve
+   ===================== */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: #1a1118;
+  color: #f0e4e8;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* =====================
+   Navigation
+   ===================== */
+
+.nav {
+  display: flex; align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 2.5rem;
+  border-bottom: 0.5px solid rgba(200,140,160,0.15);
+  background: rgba(20,12,18,0.98);
+  position: sticky; top: 0; z-index: 100;
+  backdrop-filter: blur(8px);
+}
+
+.nav-logo {
+  font-family: 'Cinzel', serif;
+  font-size: 16px; font-weight: 700;
+  color: #e8b4c4; letter-spacing: 0.08em;
+}
+
+.nav-logo span {
+  font-family: 'Quicksand', sans-serif;
+  color: rgba(220,170,185,0.4);
+  font-weight: 400; font-size: 13px; margin-left: 8px;
+}
+
+.nav-links { display: flex; gap: 2.5rem; }
+
+.nav-links a {
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(230,190,200,0.55);
+  transition: color 0.15s;
+}
+
+.nav-links a:hover,
+.nav-links a.active { color: #e8b4c4; }
+
+.nav-cta {
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 7px 18px;
+  background: rgba(180,90,120,0.2);
+  border: 0.5px solid rgba(200,130,155,0.5);
+  border-radius: 30px; color: #e8b4c4;
+  transition: background 0.15s;
+}
+
+.nav-cta:hover { background: rgba(180,90,120,0.35); }
+
+/* =====================
+   Ticker
+   ===================== */
+
+.ticker-wrap {
+  overflow: hidden; white-space: nowrap;
+  background: rgba(160,70,100,0.1);
+  border-top: 0.5px solid rgba(200,130,155,0.2);
+  border-bottom: 0.5px solid rgba(200,130,155,0.2);
+  padding: 10px 0;
+}
+
+.ticker { display: inline-block; animation: ticker 28s linear infinite; }
+
+.ticker span {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.15em;
+  text-transform: uppercase; color: rgba(220,170,185,0.6);
+  margin: 0 2rem;
+}
+
+.ticker-dot { color: #c97090; margin: 0 0.5rem; }
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* =====================
+   Buttons
+   ===================== */
+
+.btn-primary {
+  display: inline-block;
+  padding: 11px 28px; font-size: 13px; font-weight: 700;
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  background: rgba(180,70,100,0.85);
+  border: none; border-radius: 4px;
+  color: #fce8ee; cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-primary:hover { background: rgba(180,70,100,1); }
+
+.btn-secondary {
+  display: inline-block;
+  padding: 11px 28px; font-size: 13px; font-weight: 700;
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  background: transparent;
+  border: 0.5px solid rgba(200,130,155,0.5);
+  border-radius: 4px; color: #e8b4c4; cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-secondary:hover { background: rgba(180,90,120,0.1); }
+
+/* =====================
+   Badges
+   ===================== */
+
+.badge-verified {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 12px; font-weight: 600; padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(100,160,130,0.1);
+  border: 0.5px solid rgba(100,180,150,0.3);
+  color: #7dd4b0;
+}
+
+.badge-dot { width: 5px; height: 5px; border-radius: 50%; background: #7dd4b0; }
+
+.badge-cat {
+  font-size: 12px; font-weight: 600; padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(180,70,100,0.15);
+  border: 0.5px solid rgba(200,130,155,0.25);
+  color: rgba(220,160,180,0.8);
+}
+
+/* =====================
+   Club grid & cards
+   ===================== */
+
+.club-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+.club-card {
+  display: flex; flex-direction: column;
+  background: rgba(255,255,255,0.025);
+  border: 0.5px solid rgba(200,130,155,0.15);
+  border-radius: 4px; padding: 1.1rem;
+  cursor: pointer; color: inherit;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.club-card:hover {
+  border-color: rgba(200,130,155,0.4);
+  background: rgba(180,70,100,0.06);
+}
+
+.club-top { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+
+.club-avatar {
+  width: 38px; height: 38px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700; flex-shrink: 0;
+}
+
+.club-name { font-size: 15px; font-weight: 700; color: #f5e0e6; }
+.club-type { font-size: 13px; font-weight: 400; color: rgba(220,170,185,0.5); margin-top: 2px; }
+.club-desc { font-size: 14px; font-weight: 400; color: rgba(220,185,195,0.45); line-height: 1.55; margin-bottom: 12px; flex: 1; }
+.club-footer { display: flex; align-items: center; justify-content: space-between; }
+
+/* =====================
+   Generic cards
+   ===================== */
+
+.card {
+  background: rgba(255,255,255,0.025);
+  border: 0.5px solid rgba(200,130,155,0.15);
+  border-radius: 8px; padding: 1.25rem; margin-bottom: 1.25rem;
+}
+
+.card-title {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: rgba(200,140,160,0.65);
+  margin-bottom: 0.85rem; padding-bottom: 0.65rem;
+  border-bottom: 0.5px solid rgba(200,130,155,0.12);
+}
+
+.card-text { font-size: 15px; font-weight: 400; color: rgba(220,190,200,0.65); line-height: 1.75; }
+
+/* =====================
+   Info list
+   ===================== */
+
+.info-list { display: flex; flex-direction: column; gap: 10px; }
+
+.info-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+
+.info-label { font-size: 14px; font-weight: 400; color: rgba(200,150,165,0.45); flex-shrink: 0; }
+.info-value { font-size: 14px; font-weight: 600; color: rgba(230,195,205,0.75); text-align: right; }
+
+/* =====================
+   Page header
+   ===================== */
+
+.page-header {
+  padding: 3.5rem 2.5rem 2.5rem;
+  background: #1a1118;
+  border-bottom: 0.5px solid rgba(200,130,155,0.12);
+  position: relative; overflow: hidden;
+}
+
+.page-header-inner { max-width: 900px; margin: 0 auto; }
+
+.page-tag {
+  display: inline-block; font-size: 11px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(200,140,160,0.7);
+  border: 0.5px solid rgba(200,130,155,0.3);
+  border-radius: 20px; padding: 4px 16px; margin-bottom: 1rem;
+}
+
+.page-title {
+  font-family: 'Cinzel', serif;
+  font-size: 30px; font-weight: 700; color: #f5e0e6; margin-bottom: 0.5rem;
+}
+
+.page-sub { font-size: 15px; font-weight: 400; color: rgba(220,185,195,0.5); line-height: 1.7; max-width: 500px; }
+
+/* =====================
+   Section headings
+   ===================== */
+
+.section-heading {
+  font-family: 'Cinzel', serif;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: rgba(200,140,160,0.5); margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 16px;
+}
+
+.section-heading::after {
+  content: ''; flex: 1; height: 0.5px;
+  background: rgba(200,130,155,0.12);
+}
+
+.section-heading a {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: rgba(200,140,160,0.5);
+  white-space: nowrap;
+}
+
+.section-heading a:hover { color: #e8b4c4; }
+
+/* =====================
+   Spotlight link
+   ===================== */
+
+.spotlight-link {
+  display: inline-block; margin-top: 10px;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: #c97090;
+}
+
+.spotlight-link:hover { color: #e8b4c4; }
+
+/* =====================
+   Apply section
+   ===================== */
+
+.apply-section {
+  padding: 5rem 3rem; text-align: center;
+  background: #1a1118; position: relative; overflow: hidden;
+}
+
+.apply-section::before {
+  content: 'JOIN';
+  font-family: 'Cinzel', serif; font-size: 180px; font-weight: 900;
+  color: rgba(180,70,100,0.05);
+  position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none; white-space: nowrap;
+}
+
+.apply-section h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 32px; font-weight: 700; color: #f5e0e6;
+  margin-bottom: 0.75rem; position: relative; z-index: 1;
+}
+
+.apply-section p {
+  font-size: 15px; color: rgba(220,185,195,0.5);
+  margin-bottom: 2rem; max-width: 400px;
+  margin-left: auto; margin-right: auto;
+  line-height: 1.7; position: relative; z-index: 1;
+}
+
+/* =====================
+   Footer
+   ===================== */
+
+.footer {
+  padding: 2rem 2.5rem 0;
+  border-top: 0.5px solid rgba(200,130,155,0.12);
+  display: flex; flex-direction: column;
+}
+
+.footer-top {
+  display: flex; justify-content: space-between;
+  align-items: center; padding-bottom: 1.5rem;
+}
+
+.footer-logo {
+  font-family: 'Cinzel', serif;
+  font-size: 15px; font-weight: 700;
+  color: rgba(220,170,185,0.5); letter-spacing: 0.08em;
+}
+
+.footer-links { display: flex; gap: 1.5rem; }
+
+.footer-links a {
+  font-size: 13px; font-weight: 500;
+  color: rgba(200,150,165,0.4);
+  transition: color 0.15s;
+}
+
+.footer-links a:hover { color: rgba(220,170,185,0.7); }
+
+.footer-wordmark {
+  font-family: 'Cinzel', serif; font-size: 64px; font-weight: 900;
+  color: rgba(180,70,100,0.08); letter-spacing: 0.05em;
+  text-align: center; padding: 1rem 0 0; line-height: 1;
+  border-top: 0.5px solid rgba(200,130,155,0.08);
+  margin-top: 1rem; user-select: none;
+}
+
+/* =====================
+   Responsive
+   ===================== */
+
+@media (max-width: 700px) {
+  .nav-links { display: none; }
+  .footer-wordmark { font-size: 36px; }
+}
