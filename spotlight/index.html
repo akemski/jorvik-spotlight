@@ -9,6 +9,7 @@
   <style>
     body { background: #150d12; color: #fff0f4; }
 
+    /* Overview styles */
     .spotlight-page { max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem 5rem; }
     .section-divider { display: flex; align-items: center; gap: 16px; margin-bottom: 1.5rem; }
     .section-divider-label { font-family: 'Cinzel', serif; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,160,190,0.6); white-space: nowrap; }
@@ -36,6 +37,7 @@
     .sp-footer { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 8px; border-top: 0.5px solid rgba(255,255,255,0.08); }
     .sp-cat { font-size: 12px; font-weight: 600; color: rgba(255,140,170,0.6); }
 
+    /* Detail styles */
     .detail-page { max-width: 760px; margin: 0 auto; padding: 3rem 2rem 5rem; }
     .detail-back { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,160,190,0.5); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-bottom: 2rem; }
     .detail-back:hover { color: #ff9ab8; }
@@ -71,7 +73,7 @@
     <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:1.5rem;">
       <div style="font-family:'Cinzel',serif;font-size:15px;color:rgba(255,160,190,0.5);letter-spacing:0.08em;">Jorvik Spotlight</div>
       <div style="display:flex;gap:1.5rem;">
-        <a href="#" style="font-size:13px;color:rgba(255,160,190,0.4);text-decoration:none;">Instagram</a>
+        <a href="https://instagram.com/jorvikspotlight" target="_blank" style="font-size:13px;color:rgba(255,160,190,0.4);text-decoration:none;">Instagram</a>
         <a href="../about/" style="font-size:13px;color:rgba(255,160,190,0.4);text-decoration:none;">Contact</a>
         <a href="../about/" style="font-size:13px;color:rgba(255,160,190,0.4);text-decoration:none;">About</a>
       </div>
@@ -86,6 +88,7 @@
     const container = document.getElementById('pageContent');
 
     if (id) {
+      // DETAIL VIEW
       const sp = getSpotlight(id);
       const club = sp ? getClub(sp.clubId) : null;
 
@@ -113,6 +116,7 @@
         `;
       }
     } else {
+      // OVERVIEW
       document.title = 'Spotlight — Jorvik Spotlight';
       const latest = SPOTLIGHTS.find(s => s.isLatest);
       const latestClub = latest ? getClub(latest.clubId) : null;
