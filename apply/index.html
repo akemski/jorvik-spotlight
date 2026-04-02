@@ -117,7 +117,7 @@
         <div class="form-section-title">About your club</div>
         <div class="field">
           <label>Club name</label>
-          <input type="text" name="club_name" placeholder="e.g. Silver Grace" required>
+          <input type="text" name="club_name" placeholder="" required>
         </div>
         <div class="field-row">
           <div class="field">
@@ -126,7 +126,7 @@
               <select class="custom-select" name="category" required>
                 <option value="" disabled selected>Select a category</option>
                 <option>Dressage</option><option>Racing</option>
-                <option>Competitive</option><option>Allrounder</option><option>Hangout</option>
+                <option>Competitive Dressage</option><option>Allrounder</option><option>Hangout</option>
               </select>
             </div>
           </div>
@@ -145,39 +145,39 @@
           </div>
         </div>
         <div class="field">
-          <label>Founded <span>(approx.)</span></label>
-          <input type="text" name="founded" placeholder="e.g. January 2022">
+          <label>Founded</label>
+          <input type="text" name="founded" placeholder="example: January 2022">
         </div>
         <div class="field">
-          <label>Club description</label>
-          <textarea name="description" placeholder="Tell us a bit about your club — the vibe, what you do, what makes you special." required></textarea>
+          <label>About your club</label>
+          <textarea name="description" placeholder="Tell us a bit about your club! The vibe, what you do, what makes you special. The more, the better :)" required></textarea>
         </div>
         <div class="field-row">
           <div class="field">
-            <label>Number of members <span>(approx.)</span></label>
-            <input type="text" name="members" placeholder="e.g. 20">
+            <label>Number of members</label>
+            <input type="text" name="members" placeholder="exaple: 20 members">
           </div>
           <div class="field">
             <label>Meeting times</label>
-            <input type="text" name="frequency" placeholder="e.g. Saturdays 7pm">
+            <input type="text" name="frequency" placeholder="example: Tuesday 8pm, Friday 8pm" required>
           </div>
         </div>
         <div class="field">
-          <label>Requirements to join <span>(optional)</span></label>
-          <textarea name="requirements" placeholder="e.g. minimum level, language, activity requirements." style="min-height:70px;"></textarea>
+          <label>Requirements to join</label>
+          <textarea name="requirements" placeholder="example: 18+ years, level 20+" style="min-height:70px;"></textarea>
         </div>
       </div>
 
       <div class="form-section">
         <div class="form-section-title">Links & contact</div>
         <div class="field">
-          <label>Instagram account <span>(optional)</span></label>
-          <input type="text" name="instagram" placeholder="@yourclubnamehere">
-          <div class="field-hint">Your club's Instagram page if you have one.</div>
+          <label>Instagram account</label>
+          <input type="text" name="instagram" placeholder="@yourclubnamehere" required>
+          <div class="field-hint">Please share your main club account. Got a meme account on the side? Feel free to drop that one too!"</div>
         </div>
         <div class="field">
-          <label>Contact <span>(Discord or in-game name)</span></label>
-          <input type="text" name="contact" placeholder="e.g. username#1234 or your SSO name" required>
+          <label>Contact <span>(Where do you want me to contact you?)</span></label>
+          <input type="text" name="contact" placeholder="example: Instagram @yourclubname or Discord @ownersname" required>
         </div>
       </div>
 
@@ -193,7 +193,7 @@
               <option value="no">No, just the directory listing is fine</option>
             </select>
           </div>
-          <div class="field-hint">If you'd like to be verified later, you can always reach out via Instagram.</div>
+          <div class="field-hint">If you'd like to be verified later, you can always reach out to me via Instagram.</div>
         </div>
       </div>
 
@@ -204,7 +204,7 @@
           <textarea name="reason" placeholder="What are you hoping to get out of being in the directory?" required></textarea>
         </div>
         <div class="field">
-          <label>Club screenshot or image <span>(optional)</span></label>
+          <label>Your club logo or different picture <span>(will be used as your picture in the directory)</span></label>
           <div class="upload-area">
             <div class="upload-icon">↑</div>
             <div class="upload-text"><strong>Click to upload</strong> or drag and drop</div>
@@ -215,7 +215,7 @@
 
       <div class="submit-area">
         <button type="submit" class="btn-submit">Submit application</button>
-        <div class="submit-note">By submitting, you agree that we may visit your club meetings or Instagram to verify your application.</div>
+        <div class="submit-note">By submitting, you agree that we are allowed to add your club to our directory with all information that you provided.</div>
       </div>
     </form>
   </div>
@@ -225,7 +225,6 @@
       <div class="footer-logo">Jorvik Spotlight</div>
       <div class="footer-links">
         <a href="#">Instagram</a>
-        <a href="../about/">Contact</a>
         <a href="../about/">About</a>
       </div>
     </div>
