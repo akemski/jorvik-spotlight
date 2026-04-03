@@ -41,7 +41,7 @@ const CLUBS = [
     instagram: "@thunderguards_",
     instagramUrl: "https://instagram.com/thunderguards_",
     acceptingMembers: true,
-    image: "images/thunder-guards.jpg",
+    image: "images/thunder-guards.png",
     avatarBg: "rgba(80,120,200,0.25)",
     avatarColor: "#a0b8f0",
     description: "Thunder Guards is a German Storytelling club that focuses on sharing OC stories via dressage videos and story posts on Instagram. Though definitely a dressage club, the focus lies on creating a comfort space for all young women (age 16+) that still enjoy Star Stable and other games. An entirely men-free space where members have the right to vote on new applicants. Mandatory meetings are held twice a week at 7:30pm, plus a weekly optional hangout meeting outside of Star Stable. A very tight-knit family where everyone gets along and there's never silence in chat or voice calls.",
