@@ -85,7 +85,7 @@ const CLUBS = [
     instagram: "@teamillysial.sso",
     instagramUrl: "https://instagram.com/teamillysial.sso",
     acceptingMembers: true,
-    image: null,
+    image: "/images/team-illysia.png",
     avatarBg: "rgba(100,80,180,0.25)",
     avatarColor: "#c0b0f0",
     description: "Team Illysia is a German crime-based roleplay team that combines mystery, storytelling, and deep character development into one world. The goal is to create a space where every decision matters, every action has consequences, and every secret tells its own story. In Illysia, no character exists without purpose — each member brings their own background, motives, and hidden truths into the story. Plot twists, conflicts, and relationships develop naturally through roleplay, creating a dynamic and unpredictable experience. Behind the crime and mystery, you'll find a welcoming and active community that enjoys spending time together.",
