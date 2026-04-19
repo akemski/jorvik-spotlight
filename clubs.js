@@ -46,7 +46,11 @@ const CLUBS = [
     avatarColor: "#a0b8f0",
     description: "Thunder Guards is a German Storytelling club that focuses on sharing OC stories via dressage videos and story posts on Instagram. Though definitely a dressage club, the focus lies on creating a comfort space for all young women (age 16+) that still enjoy Star Stable and other games. An entirely men-free space where members have the right to vote on new applicants. Mandatory meetings are held twice a week at 7:30pm, plus a weekly optional hangout meeting outside of Star Stable. A very tight-knit family where everyone gets along and there's never silence in chat or voice calls.",
     requirements: "Age 16+ · Women only · Level 20+ (exceptions for level 18-19, must stay in basic group until leveled up) · Active outside of meetings (Discord, calls, games...)",
-    visit: null,
+    visit: {
+      date: "April 2026",
+      meetingsAttended: 1,
+      report: "The atmosphere at Thunder Guards is something you notice immediately: warm, relaxed, and genuinely familial. It's the kind of energy that only exists in a group of people who actually like each other.<br><br>I attended one of their dressage meetings, which was well-structured without feeling stiff. Terms were explained clearly and repeated, making it easy to follow along for every single member. When mistakes happened, nobody made a big deal out of it, just a gentle pointer and move on. They made a few jokes, the kind you'd only get away with among close friends, but it never felt unwelcoming.<br><br>After the session, some members stuck around to chat or play some games together. The Discord was just as lively and consistently warm.<br><br>If you're looking for a safe space that comes with just the right amount of humor, Thunder Guards is exactly what you're searching for!"
+    },
     spotlight: null
   },
   {
