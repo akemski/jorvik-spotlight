@@ -129,7 +129,7 @@ const CLUBS = [
     instagram: "@tame.flowers",
     instagramUrl: "https://instagram.com/tame.flowers",
     acceptingMembers: true,
-    image: null,
+    image: "/images/tame-flowers.jpg",
     avatarBg: "rgba(160,200,140,0.25)",
     avatarColor: "#c8e8b8",
     description: "Die 'Tame Flowers' sind ein story basierter Dressur und Hangout Club x Team auf dem 13. deutschen Server Magnolia Tower. Bei uns steht besonders die Gemeinschaft und der Spaß im Vordergrund. Unsere Dressurstunden sind basiert auf dem SSD System und daher sehr strukturiert. Bei unseren Hangout Treffen spielen wir oft Spiele in SSO aber auch Browser Games oder andere Multiplayer Games. Des weiteren gibt es bei den Tame Flowers einige interne Aktivitäten, wie zum Beispiel unseren Bookclub und unsere Artist Lounge, bei welchen wir uns regelmäßig austauschen können. Im Club läuft alles sehr harmonisch ab, worauf alle einen großen Wert legen.",
