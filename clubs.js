@@ -82,7 +82,7 @@ const CLUBS = [
     members: "19/20",
     meetingTimes: "Monday & Wednesday 8:00pm - Open End",
     language: "German",
-    instagram: "@teamillysial.sso",
+    instagram: "@teamillysia.sso",
     instagramUrl: "https://instagram.com/teamillysial.sso",
     acceptingMembers: true,
     image: "/images/team-illysia.png",
