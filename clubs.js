@@ -145,7 +145,7 @@ const CLUBS = [
     id: "team-kinzoku",
     name: "Team Kinzoku",
     initials: "TK",
-    category: "dressage",
+    category: "competitive dressage",
     categoryLabel: "Competitive Dressage",
     server: "DE9",
     founded: "Februar 2026",
