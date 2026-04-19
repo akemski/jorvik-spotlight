@@ -176,7 +176,7 @@ const CLUBS = [
     image: null,
     avatarBg: "rgba(60,90,140,0.25)",
     avatarColor: "#90b0d8",
-    description: "Rain Bullets is a dressage and hangout/story club & team on the German servers. We focus on teaching and improving SSD dressage through routines and competitions, all led by our experienced instructors. Whether you're a beginner taking your first steps or an experienced rider refining your skills, you'll find a place here. Beyond our dressage sessions, we host weekly hangout meetings that come in all shapes and forms. From relaxed to more creative and non traditional events, we always aim to keep things fresh for everyone involved. More than just a club, Rain Bullets is a group of people who support each other, grow together, and share more than just a passion for dressage.",
+    description: "雨 ｀ヽ There are stories of a man who appears when the rain begins to fall.. a quiet observer. Those who follow the path he leaves behind often end up in the same place. Rain Bullets is a dressage and hangout/story club & team on the German servers. We focus on teaching and improving SSD dressage through routines and competitions, all led by our experienced instructors. Whether you're a beginner taking your first steps or an experienced rider refining your skills, you'll find a place here. Beyond our dressage sessions, we host weekly hangout meetings that come in all shapes and forms. From relaxed to more creative and non traditional events, we always aim to keep things fresh for everyone involved. More than just a club, Rain Bullets is a group of people who support each other, grow together, and share more than just a passion for dressage.",
     requirements: "15+ Jahre · Level 19+ · Star Rider · Discord",
     visit: null,
     spotlight: null
@@ -217,7 +217,7 @@ const CLUBS = [
     instagram: "@spice.rush_",
     instagramUrl: "https://instagram.com/spice.rush_",
     acceptingMembers: true,
-    image: null,
+    image: "/images/spice-rush.png",
     avatarBg: "rgba(200,120,60,0.25)",
     avatarColor: "#f0b880",
     description: "Spice Rush basiert auf der Aesthetik des marokkanischen Königreichs — wir bezeichnen uns als 'Den Orient von Jorvik'. Besonders wichtig ist uns die Stimmung untereinander, weshalb wir vor der Aufnahme eines neuen Spicys einen kleinen Vibecheck vereinbaren. Von 16 bis Mitte 20 haben wir alle Altersklassen dabei, was unser Miteinander keineswegs negativ beeinflusst. Unsere Gruppe ist jederzeit gut gelaunt, lebhaft und fürsorglich. Hauptsächlich fokussieren wir uns darauf, uns in der SSO Dressur zu verbessern, doch für genügend Abwechslung ist stets gesorgt! Jeden Samstag veranstaltet unser internes Eventteam ein Freizeittreffen bzw. Spieleabend — dort kann man Punkte in Form von Chili-Schoten sammeln und sich die Rolle des 'Spicy des Monats' verdienen!",
